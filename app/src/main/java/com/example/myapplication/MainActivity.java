@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.app.AlertDialog;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -86,10 +88,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
+            Intent myIntent = new Intent(MainActivity.this, ListCaesActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            MainActivity.this.startActivity(myIntent);
+        } else if (id == R.id.nav_caes_adoptados) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_lista_caes) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_passeios) {
+
+        } else if (id == R.id.nav_saude) {
 
         }
 
